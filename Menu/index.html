@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <!-- parallax -->
+    <script>
+      document.getElementsByTagName("html")[0].className += " js";
+    </script>
+    <link id="codyframe" rel="stylesheet" href="main/assets/css/style.css" />
+    <!-- browsers not supporting CSS variables -->
+    <script>
+      if (!("CSS" in window) || !CSS.supports("color", "var(--color-var)")) {
+        var cfStyle = document.getElementById("codyframe");
+        if (cfStyle) {
+          var href = cfStyle.getAttribute("href");
+          href = href.replace("style.css", "style-fallback.css");
+          cfStyle.setAttribute("href", href);
+        }
+      }
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="normalize.css" />
+
+    <link rel="stylesheet" href="threesixty.css" />
+
+    <link rel="stylesheet" href="card.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+      integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="media.css" />
+  </head>
+  <body
+    data-spy="scroll"
+    data-target="#myScrollspy"
+    data-offset="15"
+    style="height: 2000vh;"
+  >
+    <section class="first-section">
+      <header id="header-menu">
+        <div class="info">
+          <div>
+            <a class="mr-2" href="">372 555 555</a>
+            <a href="">info@info@gmail.com</a>
+          </div>
+          <div>
+            <a href="" class="ml-2"><i class="fab fa-instagram"></i></a>
+            <a href="" class="ml-2"><i class="fab fa-facebook"></i></a>
+            <a href="" class="ml-2">EST</a>
+            <a href="">RUS</a>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-3 d-none d-md-block ml-5">
+              <img id="logo" src="White-Ariol.png" alt="logo" />
+            </div>
+
+            <div class="col-md-3 d-none d-md-block basket">
+              <ul>
+                <li>
+                  <div class="menu">
+                    <a class="hov" href="">Koostöö</a>
+                    <a href=""
+                      ><svg
+                        class="hov"
+                        width="21"
+                        height="19"
+                        viewBox="0 0 21 19"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M18.6539 15.855L13.328 11.0363C14.1545 10.0696 14.6016 8.8877 14.6016 7.64453C14.6016 6.15645 13.9597 4.76113 12.7989 3.70908C11.6382 2.65703 10.0919 2.07812 8.44922 2.07812C6.80654 2.07812 5.26025 2.65889 4.09951 3.70908C2.93672 4.75928 2.29688 6.15645 2.29688 7.64453C2.29688 9.13076 2.93877 10.5298 4.09951 11.58C5.26025 12.632 6.80449 13.2109 8.44922 13.2109C9.82324 13.2109 11.1275 12.8064 12.196 12.0605L17.5219 16.8773C17.5375 16.8915 17.556 16.9027 17.5764 16.9103C17.5969 16.918 17.6187 16.9219 17.6408 16.9219C17.6629 16.9219 17.6848 16.918 17.7052 16.9103C17.7256 16.9027 17.7442 16.8915 17.7598 16.8773L18.6539 16.0702C18.6695 16.0561 18.6819 16.0393 18.6904 16.0208C18.6988 16.0024 18.7032 15.9826 18.7032 15.9626C18.7032 15.9426 18.6988 15.9228 18.6904 15.9044C18.6819 15.8859 18.6695 15.8691 18.6539 15.855ZM11.6977 10.5836C10.8281 11.3685 9.67559 11.8008 8.44922 11.8008C7.22285 11.8008 6.07031 11.3685 5.20078 10.5836C4.3333 9.79688 3.85547 8.7541 3.85547 7.64453C3.85547 6.53496 4.3333 5.49033 5.20078 4.70547C6.07031 3.92061 7.22285 3.48828 8.44922 3.48828C9.67559 3.48828 10.8302 3.91875 11.6977 4.70547C12.5651 5.49219 13.043 6.53496 13.043 7.64453C13.043 8.7541 12.5651 9.79873 11.6977 10.5836Z"
+                        /></svg
+                    ></a>
+                    <a href=""
+                      ><svg
+                        class="hov"
+                        width="20"
+                        height="19"
+                        viewBox="0 0 20 19"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6.79102 18.8607C7.58492 18.8607 8.22852 18.2206 8.22852 17.431C8.22852 16.6413 7.58492 16.0012 6.79102 16.0012C5.99711 16.0012 5.35352 16.6413 5.35352 17.431C5.35352 18.2206 5.99711 18.8607 6.79102 18.8607Z"
+                        />
+                        <path
+                          d="M15.5244 18.8607C16.3183 18.8607 16.9619 18.2206 16.9619 17.431C16.9619 16.6413 16.3183 16.0012 15.5244 16.0012C14.7305 16.0012 14.0869 16.6413 14.0869 17.431C14.0869 18.2206 14.7305 18.8607 15.5244 18.8607Z"
+                        />
+                        <path
+                          d="M19.4091 1.93894C19.3496 1.86605 19.2747 1.80716 19.1896 1.76651C19.1045 1.72585 19.0115 1.70445 18.9171 1.70383H5.6154L6.03068 2.97471H18.0802L16.3743 10.6H6.79096L3.87123 1.40517C3.83965 1.30761 3.78481 1.21908 3.71138 1.14716C3.63796 1.07524 3.54813 1.02205 3.44957 0.992136L0.830114 0.191482C0.749569 0.166865 0.664939 0.158268 0.581054 0.166182C0.497169 0.174095 0.415673 0.198364 0.341218 0.237603C0.19085 0.31685 0.0782919 0.452262 0.0283059 0.614049C-0.0216802 0.775837 -0.00499991 0.950748 0.0746772 1.1003C0.154354 1.24986 0.290502 1.36181 0.453168 1.41153L2.74679 2.11051L5.67929 11.3244L4.63151 12.1759L4.54846 12.2585C4.28928 12.5555 4.14238 12.9332 4.13305 13.3264C4.12372 13.7196 4.25255 14.1037 4.49735 14.4126C4.67148 14.6232 4.89276 14.7904 5.14348 14.9007C5.3942 15.0111 5.66741 15.0615 5.94124 15.0481H16.6043C16.7738 15.0481 16.9363 14.9811 17.0561 14.8619C17.1759 14.7428 17.2432 14.5811 17.2432 14.4126C17.2432 14.2441 17.1759 14.0825 17.0561 13.9633C16.9363 13.8441 16.7738 13.7772 16.6043 13.7772H5.83902C5.76545 13.7747 5.69377 13.7533 5.6309 13.7153C5.56804 13.6772 5.51612 13.6236 5.48015 13.5597C5.44418 13.4958 5.42538 13.4238 5.42557 13.3506C5.42577 13.2774 5.44494 13.2054 5.48124 13.1417L7.02096 11.8709H16.8854C17.0331 11.8744 17.1775 11.827 17.294 11.7367C17.4105 11.6463 17.4919 11.5186 17.5243 11.3752L19.5496 2.47906C19.569 2.38433 19.5665 2.28644 19.5421 2.19284C19.5178 2.09924 19.4723 2.0124 19.4091 1.93894Z"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="face">
+        <!-- Середина -->
+        <div class="container">
+          <p class="main-text">Uued prillid <br />on kohal</p>
+          <div class="parallax" data-speed="-1">
+            <img
+              class="prlx-img"
+              style="width: 655px;"
+              src="pexels-photo-1018911-removebg-preview.png"
+            />
+          </div>
+          <div class="Box_360">
+            <div id="container">
+              <div class="threesixty product1">
+                <div class="spinner">
+                  <span>0%</span>
+                </div>
+                <ol class="threesixty_images"></ol>
+              </div>
+            </div>
+            <div class="btn" style="margin-top:40px;">
+              <a style="font-size: 24px; line-height: 28px;" href="">Vaata</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Меню -->
+    </section>
+    <section>
+      <div class="cards">
+        <div class="card hvr-bob">
+          <svg
+            class="title"
+            width="65"
+            height="65"
+            viewBox="0 0 65 65"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <rect
+              width="65"
+              height="65"
+              fill="url(#pattern0)"
+              fill-opacity="0.7"
+            />
+            <defs>
+              <pattern
+                id="pattern0"
+                patternContentUnits="objectBoundingBox"
+                width="1"
+                height="1"
+              >
+                <use xlink:href="#image0" transform="scale(0.02)" />
+              </pattern>
+              <image
+                id="image0"
+                width="50"
+                height="50"
+                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAADz0lEQVRoge2ZS2xOQRTHf9p4xKNeTSRU+knYKPFc1HtlRaI2GhEiqLCyIuKxEI2IhSbsJCyQeC68NWwkHqVChBDUohWiEq8GodWvn8W5H2fu8/vuna8i+f7JJPfOnfmfc+6cOXNmBooooogi/if06UVZpcAsoBqYCYwCyoCfwDvgJnAOaOtFnfLCJGAf8BbIRJQu4DAw9J9oGoApwBWilfcrz4FUPsIK4VoVwF5gOVDi+taJuFAT8Ar4DAxCRm0ZMEG1fY64YUcBdIxELfAJ7x9uBjYCw0P6lgLbgR7V71ghlfVDGXAUrwFPgMV5cu13ccy1p2Y4KhCFtfAOoA6va+WCciCtuG5Y0TICE5FwqY24C4xPyNvs4lyYkC8U1cBHl8A9iK8nxUkX7wULnL6YiGlENzKZbeEEpiGdwAiL/IDMiddKyA+gxrKMRryBY7VNAWWYE7sb+0YAvMdryGWbAtwhdoNNcgeVeI3IIK5sBbV4J3YhsFnJaMUMxamk5BWYK/Yt7EQnPzxVcnYAL9T70qTkxxVZBzAuKWEA5is5acTNTqm6XUnIp2IOb10SsgjcVnKuOXX1qu5wEvKriugxhXOpJZhzcI5Tv0nVnY9LPtlFviiJpiEYDLQoOXolX6/qG4MIopK6Ver5PpZjuUIDf/OzNLAtoF0mDnkp5vbUZgqiUYM56vWu7zocn4kjYLYi+EkBch2gCjOsNwN9XW30/uRAEFGYa81Qz3ccgTYxBgkk2V3jd2AF8MvVrko9twaRhRkyTT0/yF2/nDAMMWKs855GjGhxtSsBpqv3h3GENfF3SFfGIQjAGCSM55KzzVFtuoAhcQTqLHdZHAIfVGFuAfwmt8ZB1e5qXKH3FMmKuCQKNXhPWOoJPpIaCXxTbdfEFXxWkTTEJUEWu0OYBnQTvQVoUO3bgQFxFdDxu4V4qckSzBU7g/zlqM1YNWJsts+WGLL/IIWZLG7No+8CzARQrxMTQvqBbBneqD5Pgf55yPbFEUXY47yXB7StRP6c3k9oV6rHu9i54T4j60JGJzFGAC99lGoGTjulEfFhv+1pBriIJJ9RqMYciQyw1oYRWaSAZyGK+pU0cJ3cjjtHIhNbz4kMsNOiDX8wFDlQjjKg1VGgMoKvBFnsDmKG2Kw75T0S+V4rzAN2I5PZDz3IdcEjxCU/IOdeIEdJo5FFcQYyEm48A9YhWUWvYCHi+53k53JBpR0JFP16ywA3hiEngJfwvxcJK11IoFhDgsUuC9s3Vikka56CZLblwEDn2xfk0rMNyaYfAF8tyy+iiCKK+E/wG5tpni49iwaFAAAAAElFTkSuQmCC"
+              />
+            </defs>
+          </svg>
+
+          <p style="text-align: center;">Laatsevedelikud ja silmatilgad</p>
+        </div>
+        <div class="card hvr-bob">
+          <svg
+            class="title"
+            width="85"
+            height="59"
+            viewBox="0 0 85 59"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M85 29.9369L84.9334 29.7547C84.8697 29.1421 84.7266 28.7586 84.4588 28.5C82.7404 24.0489 77.0454 10.1699 69.3883 0.653374C67.269 -1.98258 61.1405 3.97478 58.2987 7.54086C55.4568 11.1069 56.8409 17.1354 58.5565 14.7147C60.6787 11.7212 66.0195 2.32969 68 3.51839C69.9564 4.69146 75.0507 13.7811 80.733 27.648C78.6222 27.4693 74.8652 27.2992 70.4735 27.2992C64.1013 27.2992 59.0183 28.4167 54.0104 29.4944C49.0436 30.5599 45.7342 31.3113 42.5 31.3113C39.2629 31.3113 35.9564 30.5599 30.9896 29.4944C25.9788 28.4167 20.8987 27.2992 14.5265 27.2992C10.1348 27.2992 6.37925 27.4693 4.267 27.6463C9.94783 13.7811 15.0436 4.68973 17 3.51839C18.9805 2.32969 24.3185 11.7212 26.4407 14.7147C28.1562 17.1372 29.5417 11.1069 26.6985 7.54086C23.8567 3.97478 17.731 -1.98258 15.6088 0.653374C7.95458 10.1681 2.261 24.0489 0.542583 28.5C0.274833 28.7569 0.130333 29.1438 0.0665832 29.7547L0 29.9369L0.0439165 29.9178C-1.42492e-07 30.48 0 31.2141 0 32.1911C0 37.9836 0.542583 38.9918 0.772083 39.3354C1.08233 39.8039 1.95358 40.4512 2.2355 40.9457C2.65058 41.6711 2.79933 43.9114 2.99908 45.2042C4.5815 55.4495 6.76458 59 19.2185 59C30.8125 59 36.5259 54.7832 38.7062 44.3678C38.8691 43.5904 39.1567 40.2603 39.3337 39.4863C39.4032 39.1809 39.6327 38.7245 40.2362 38.61C41.0408 38.5163 41.7747 38.4729 42.5 38.4729C43.2253 38.4729 43.9549 38.5163 44.7638 38.61C45.3645 38.7228 45.5968 39.1809 45.6662 39.4863C45.8405 40.2603 46.1309 43.5904 46.2938 44.3678C48.4741 54.7832 54.1875 59 65.7815 59C78.2354 59 80.4185 55.4495 81.9981 45.2042C82.1978 43.9114 82.3494 41.6711 82.7645 40.9457C83.0464 40.4512 83.9163 39.8039 84.2279 39.3354C84.4574 38.9918 85 37.9836 85 32.1911C85 31.2141 85 30.4818 84.9561 29.9178L85 29.9369ZM36.5812 40.3939C36.3964 41.4193 36.1923 42.4394 35.9692 43.4533C34.408 50.6687 30.9612 55.479 19.2185 55.479C7.83842 55.479 6.82833 52.5706 5.75733 44.4025C5.35925 41.3535 4.50075 37.9801 5.48108 35.1463C6.0265 33.5706 6.96433 31.3581 10.2567 31.3581C12.6607 31.3581 24.5565 31.5507 31.8693 33.4804C34.0028 34.0478 37.4751 35.03 36.5812 40.3939ZM79.2398 44.4025C78.1688 52.5706 77.1616 55.479 65.7815 55.479C54.0359 55.479 50.5906 50.6705 49.0308 43.4533C48.8095 42.4385 48.6045 41.4186 48.416 40.3939C47.5249 35.0283 50.9972 34.0478 53.1307 33.4804C60.4435 31.5525 72.3392 31.3581 74.7433 31.3581C78.0328 31.3581 78.9735 33.5689 79.5161 35.1463C80.4978 37.9801 79.6407 41.3535 79.2398 44.4025Z"
+              fill="#555555"
+            />
+          </svg>
+          <p>
+            Prilliraamid
+          </p>
+        </div>
+        <div class="card hvr-bob">
+          <svg
+            class="title"
+            width="85"
+            height="59"
+            viewBox="0 0 85 59"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M85 29.9369L84.9334 29.7547C84.8697 29.1421 84.7266 28.7586 84.4588 28.5C82.7404 24.0489 77.0454 10.1699 69.3883 0.653374C67.269 -1.98258 61.1405 3.97478 58.2987 7.54086C55.4568 11.1069 56.8409 17.1354 58.5565 14.7147C60.6787 11.7212 66.0195 2.32969 68 3.51839C69.9564 4.69146 75.0507 13.7811 80.733 27.648C78.6222 27.4693 74.8652 27.2992 70.4735 27.2992C64.1013 27.2992 59.0183 28.4167 54.0104 29.4944C49.0436 30.5599 45.7342 31.3113 42.5 31.3113C39.2629 31.3113 35.9564 30.5599 30.9896 29.4944C25.9788 28.4167 20.8987 27.2992 14.5265 27.2992C10.1348 27.2992 6.37925 27.4693 4.267 27.6463C9.94783 13.7811 15.0436 4.68973 17 3.51839C18.9805 2.32969 24.3185 11.7212 26.4407 14.7147C28.1562 17.1372 29.5417 11.1069 26.6985 7.54086C23.8567 3.97478 17.731 -1.98258 15.6088 0.653374C7.95458 10.1681 2.261 24.0489 0.542583 28.5C0.274833 28.7569 0.130333 29.1438 0.0665832 29.7547L0 29.9369L0.0439165 29.9178C-1.42492e-07 30.48 0 31.2141 0 32.1911C0 37.9836 0.542583 38.9918 0.772083 39.3354C1.08233 39.8039 1.95358 40.4512 2.2355 40.9457C2.65058 41.6711 2.79933 43.9114 2.99908 45.2042C4.5815 55.4495 6.76458 59 19.2185 59C30.8125 59 36.5259 54.7832 38.7062 44.3678C38.8691 43.5904 39.1567 40.2603 39.3337 39.4863C39.4032 39.1809 39.6327 38.7245 40.2362 38.61C41.0408 38.5163 41.7747 38.4729 42.5 38.4729C43.2253 38.4729 43.9549 38.5163 44.7638 38.61C45.3645 38.7228 45.5968 39.1809 45.6662 39.4863C45.8405 40.2603 46.1309 43.5904 46.2938 44.3678C48.4741 54.7832 54.1875 59 65.7815 59C78.2354 59 80.4185 55.4495 81.9981 45.2042C82.1978 43.9114 82.3494 41.6711 82.7645 40.9457C83.0464 40.4512 83.9163 39.8039 84.2279 39.3354C84.4574 38.9918 85 37.9836 85 32.1911C85 31.2141 85 30.4818 84.9561 29.9178L85 29.9369ZM36.5812 40.3939C36.3964 41.4193 36.1923 42.4394 35.9692 43.4533C34.408 50.6687 30.9612 55.479 19.2185 55.479C7.83842 55.479 6.82833 52.5706 5.75733 44.4025C5.35925 41.3535 4.50075 37.9801 5.48108 35.1463C6.0265 33.5706 6.96433 31.3581 10.2567 31.3581C12.6607 31.3581 24.5565 31.5507 31.8693 33.4804C34.0028 34.0478 37.4751 35.03 36.5812 40.3939ZM79.2398 44.4025C78.1688 52.5706 77.1616 55.479 65.7815 55.479C54.0359 55.479 50.5906 50.6705 49.0308 43.4533C48.8095 42.4385 48.6045 41.4186 48.416 40.3939C47.5249 35.0283 50.9972 34.0478 53.1307 33.4804C60.4435 31.5525 72.3392 31.3581 74.7433 31.3581C78.0328 31.3581 78.9735 33.5689 79.5161 35.1463C80.4978 37.9801 79.6407 41.3535 79.2398 44.4025Z"
+              fill="#555555"
+            />
+          </svg>
+          <p>
+            Prillitoosid
+          </p>
+        </div>
+        <div class="card hvr-bob">
+          <svg
+            class="title"
+            width="85"
+            height="59"
+            viewBox="0 0 85 59"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M85 29.9369L84.9334 29.7547C84.8697 29.1421 84.7266 28.7586 84.4588 28.5C82.7404 24.0489 77.0454 10.1699 69.3883 0.653374C67.269 -1.98258 61.1405 3.97478 58.2987 7.54086C55.4568 11.1069 56.8409 17.1354 58.5565 14.7147C60.6787 11.7212 66.0195 2.32969 68 3.51839C69.9564 4.69146 75.0507 13.7811 80.733 27.648C78.6222 27.4693 74.8652 27.2992 70.4735 27.2992C64.1013 27.2992 59.0183 28.4167 54.0104 29.4944C49.0436 30.5599 45.7342 31.3113 42.5 31.3113C39.2629 31.3113 35.9564 30.5599 30.9896 29.4944C25.9788 28.4167 20.8987 27.2992 14.5265 27.2992C10.1348 27.2992 6.37925 27.4693 4.267 27.6463C9.94783 13.7811 15.0436 4.68973 17 3.51839C18.9805 2.32969 24.3185 11.7212 26.4407 14.7147C28.1562 17.1372 29.5417 11.1069 26.6985 7.54086C23.8567 3.97478 17.731 -1.98258 15.6088 0.653374C7.95458 10.1681 2.261 24.0489 0.542583 28.5C0.274833 28.7569 0.130333 29.1438 0.0665832 29.7547L0 29.9369L0.0439165 29.9178C-1.42492e-07 30.48 0 31.2141 0 32.1911C0 37.9836 0.542583 38.9918 0.772083 39.3354C1.08233 39.8039 1.95358 40.4512 2.2355 40.9457C2.65058 41.6711 2.79933 43.9114 2.99908 45.2042C4.5815 55.4495 6.76458 59 19.2185 59C30.8125 59 36.5259 54.7832 38.7062 44.3678C38.8691 43.5904 39.1567 40.2603 39.3337 39.4863C39.4032 39.1809 39.6327 38.7245 40.2362 38.61C41.0408 38.5163 41.7747 38.4729 42.5 38.4729C43.2253 38.4729 43.9549 38.5163 44.7638 38.61C45.3645 38.7228 45.5968 39.1809 45.6662 39.4863C45.8405 40.2603 46.1309 43.5904 46.2938 44.3678C48.4741 54.7832 54.1875 59 65.7815 59C78.2354 59 80.4185 55.4495 81.9981 45.2042C82.1978 43.9114 82.3494 41.6711 82.7645 40.9457C83.0464 40.4512 83.9163 39.8039 84.2279 39.3354C84.4574 38.9918 85 37.9836 85 32.1911C85 31.2141 85 30.4818 84.9561 29.9178L85 29.9369ZM36.5812 40.3939C36.3964 41.4193 36.1923 42.4394 35.9692 43.4533C34.408 50.6687 30.9612 55.479 19.2185 55.479C7.83842 55.479 6.82833 52.5706 5.75733 44.4025C5.35925 41.3535 4.50075 37.9801 5.48108 35.1463C6.0265 33.5706 6.96433 31.3581 10.2567 31.3581C12.6607 31.3581 24.5565 31.5507 31.8693 33.4804C34.0028 34.0478 37.4751 35.03 36.5812 40.3939ZM79.2398 44.4025C78.1688 52.5706 77.1616 55.479 65.7815 55.479C54.0359 55.479 50.5906 50.6705 49.0308 43.4533C48.8095 42.4385 48.6045 41.4186 48.416 40.3939C47.5249 35.0283 50.9972 34.0478 53.1307 33.4804C60.4435 31.5525 72.3392 31.3581 74.7433 31.3581C78.0328 31.3581 78.9735 33.5689 79.5161 35.1463C80.4978 37.9801 79.6407 41.3535 79.2398 44.4025Z"
+              fill="#555555"
+            />
+          </svg>
+          <p>
+            Valmis Prillid
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="pt-4 d-flex justify-content-center align-items-center pb-4">
+        <div
+          style="border: 1px solid #000000; width: 142px; height: 0px;"
+        ></div>
+        <p
+          class="mb-0"
+          style="
+            font-family: Habibi;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 48px;
+            line-height: 60px;
+
+            color: #4aa9d8;
+          "
+        >
+          uued
+        </p>
+        <p
+          class="mb-0"
+          style="
+            font-family: Kanit;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 48px;
+            line-height: 72px;
+          "
+        >
+          tooted
+        </p>
+        <div
+          style="border: 1px solid #000000; width: 142px; height: 0px;"
+        ></div>
+      </div>
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="cards__item">
+              <div class="cards__image">
+                <img src="https://picsum.photos/200/300" alt="" />
+              </div>
+              <div class="cards__body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                corrupti a voluptatibus autem eaque aut nisi quis ex sequi!
+                Ducimus necessitatibus deleniti mollitia ex dignissimos odio
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cards__item">
+              <div class="cards__image">
+                <img src="https://picsum.photos/200/300" alt="" />
+              </div>
+              <div class="cards__body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                corrupti a voluptatibus autem eaque aut nisi quis ex sequi!
+                Ducimus necessitatibus deleniti mollitia ex dignissimos odio
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cards__item">
+              <div class="cards__image">
+                <img src="https://picsum.photos/900" alt="" />
+              </div>
+              <div class="cards__body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cards__item">
+              <div class="cards__image">
+                <img src="https://picsum.photos/200/300" alt="" />
+              </div>
+              <div class="cards__body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                corrupti a voluptatibus autem eaque aut nisi quis ex sequi!
+                Ducimus necessitatibus deleniti mollitia ex dignissimos odio
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cards__item">
+              <div class="cards__image">
+                <img src="https://picsum.photos/200/300" alt="" />
+              </div>
+              <div class="cards__body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                corrupti a voluptatibus autem eaque aut nisi quis ex sequi!
+                Ducimus necessitatibus deleniti mollitia ex dignissimos odio
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cards__item">
+              <div class="cards__image">
+                <img src="https://picsum.photos/200/300" alt="" />
+              </div>
+              <div class="cards__body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                corrupti a voluptatibus autem eaque aut nisi quis ex sequi!
+                Ducimus necessitatibus deleniti mollitia ex dignissimos odio
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cards__item">
+              <div class="cards__image">
+                <img src="https://picsum.photos/200/300" alt="" />
+              </div>
+              <div class="cards__body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                corrupti a voluptatibus autem eaque aut nisi quis ex sequi!
+                Ducimus necessitatibus deleniti mollitia ex dignissimos odio
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cards__item">
+              <div class="cards__image">
+                <img src="https://picsum.photos/200/300" alt="" />
+              </div>
+              <div class="cards__body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                corrupti a voluptatibus autem eaque aut nisi quis ex sequi!
+                Ducimus necessitatibus deleniti mollitia ex dignissimos odio
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cards__item">
+              <div class="cards__image">
+                <img src="https://picsum.photos/200/300" alt="" />
+              </div>
+              <div class="cards__body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                corrupti a voluptatibus autem eaque aut nisi quis ex sequi!
+                Ducimus necessitatibus deleniti mollitia ex dignissimos odio
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="cards__item">
+              <div class="cards__image">
+                <img src="https://picsum.photos/200/300" alt="" />
+              </div>
+              <div class="cards__body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam
+                corrupti a voluptatibus autem eaque aut nisi quis ex sequi!
+                Ducimus necessitatibus deleniti mollitia ex dignissimos odio
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="pt-4 d-flex justify-content-center align-items-center pb-4">
+        <div
+          style="border: 1px solid #000000; width: 142px; height: 0px;"
+        ></div>
+        <p
+          class="mb-0"
+          style="
+            font-family: Habibi;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 48px;
+            line-height: 60px;
+
+            color: #4aa9d8;
+          "
+        >
+          meie
+        </p>
+        <p
+          class="mb-0"
+          style="
+            font-family: Kanit;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 48px;
+            line-height: 72px;
+          "
+        >
+          tooted
+        </p>
+        <div
+          style="border: 1px solid #000000; width: 142px; height: 0px;"
+        ></div>
+      </div>
+
+      <!-- Боковое Меню -->
+      <div>
+        <nav class="navbar-expand-lg hide fixed-top my-7">
+          <div>
+            <ul class="navbar-nav sidenav mt-7">
+              <li class="nav-item change">
+                <a class="nav-link" href="#" id="display" data-toggle="collapse"
+                  >Kontaktläätsed <i class="fa fa-chevron-right"></i
+                ></a>
+                <ul class="hide-nav-item">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <span class="nav-link-text">Item 2.1</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <span class="nav-link-text">Item 2.2</span>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="#">Läätsevedelikud</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Prilliklaasid</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Prilliraamid</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Prillitoosid</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Silmatilgad</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Valmisprillid metall</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Valmisprillid plastik</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!-- Detect -->
+    <!-- <script src="detect.js"></script> -->
+    <!-- SCR -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="jquery-1.8.3.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script> -->
+    <script type="text/javascript" src="threesixty.js"></script>
+    <!-- <script
+      type="text/javascript"
+      src="threesixty.fullscreen.js"
+    ></script> -->
+
+    <script src="main/assets/js/scripts.js"></script>
+
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
