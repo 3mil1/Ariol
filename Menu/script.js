@@ -20,29 +20,6 @@ $(window).scroll(function () {
   }
 });
 
-/* 3d */
-
-window.onload = init;
-
-var product;
-function init() {
-  product1 = $(".product1").ThreeSixty({
-    totalFrames: 52,
-    endFrame: 30,
-    currentFrame: 1,
-    imgList: ".threesixty_images",
-    progress: ".spinner",
-    imagePath: "car/",
-    filePrefix: "",
-    ext: ".png",
-    height: 125,
-    // width: 1000,
-    navigation: true,
-    disableSpin: false,
-    plugins: ["ThreeSixtyFullscreen"],
-  });
-}
-
 /* Parallax */
 
 $(document).ready(function () {
@@ -81,31 +58,21 @@ $(".change").click(function () {
   $(".hide-nav-item ").toggle();
 });
 
-let swiper = new Swiper(".swiper-container", {
-  slidesPerView: 4,
-  spaceBetween: 10,
-  centeredSlides: true,
-  loop: true,
-  // loopFillGroupWithBlank: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-});
-
 /* Toodete Valik */
 
-$(function () {
-  //caches a jQuery object containing the header element
-  var nav = $("nav");
-  $(window).scroll(function () {
-    var scroll = $(window).scrollTop();
+$(document).ready(function () {
+  var windowHeight = $(window).height();
 
-    if (scroll >= 1200) {
-      nav.removeClass("hide").addClass("show");
-    } else {
-      nav.addClass("hide").removeClass("show");
-    }
+  $(document).on("scroll", function () {
+    $("#meietooted").each(function () {
+      var self = $(this),
+        height = self.offset().top + self.height()/3 - windowHeight/3;
+      if ($(document).scrollTop() >= height) {
+        $("nav").removeClass("hide").addClass("show");
+      } else {
+        $("nav").addClass("hide").removeClass("show");
+      }
+    });
   });
 });
 
@@ -146,4 +113,82 @@ $(function () {
 });
 /* EndOfSpin 360 */
 
+/* remove fadeUp */
+$(".card")
+  .addClass("animate__fadeInUp")
+  .delay(1600)
+  .queue(function () {
+    $(this).removeClass("animate__fadeInUp").dequeue();
+  });
 
+/* btn delay */
+$(".btn")
+  .css("visibility", "hidden")
+  .delay(900)
+  .queue(function () {
+    $(this)
+      .css("visibility", "visible")
+      .addClass("animate__bounceIn")
+      .dequeue();
+  });
+
+/* SWIPER */
+
+let swiper = new Swiper(".swiper-container", {
+  slidesPerView: 4,
+  spaceBetween: 10,
+  centeredSlides: true,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+  breakpoints: {
+    // when window width is >= 320px
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    // when window width is >= 480px
+    480: {
+      slidesPerView: 3,
+    },
+    // when window width is >= 640px
+    640: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+/* End SWIPER */
+
+
+/* Mobile Menu */
+
+$(document).ready(function() {
+	$('.header__burger').click(function(event) {
+		$('.header__burger,.header__menu').toggleClass('active');
+		$('body').toggleClass('lock');
+	});
+});
+
+/* Side Mobile Menu */
+
+
+const $sideNav = $('.sidenav');
+
+$(document).mouseup(e => {
+  if (!$sideNav.is(e.target) // if the target of the click isn't the container...
+  && $sideNav.has(e.target).length === 0) // ... nor a descendant of the container
+  {
+    $sideNav.removeClass('active');
+ }
+});
+
+$(document).ready(function() {
+	$('#mobile-side-nav').click(function(event) {
+		$('.sidenav').toggleClass('active');
+	});
+});

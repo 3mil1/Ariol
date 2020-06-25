@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
 
@@ -23,6 +23,11 @@
       }
     </script>
 
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
+/>
+    
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -32,8 +37,6 @@
 
     <link rel="stylesheet" href="normalize.css" />
 
-
-    <link rel="stylesheet" href="card.css" />
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
 
@@ -46,16 +49,58 @@
 
     <link rel="stylesheet" href="style.css" />
 
+   
+
+
+
     <link rel="stylesheet" href="media.css" />
+
   </head>
   <body
-    data-spy="scroll"
-    data-target="#myScrollspy"
-    data-offset="15"
     style="height: 2000vh;"
   >
     <section class="first-section">
-      <header id="header-menu">
+
+      <div class="header">
+        <div class="">
+          <div class="header__body">
+            <!-- <a href="#" class="header__logo">
+              <img src="White-Ariol.png" alt="">
+            </a> -->
+
+            <div class="circle">
+              <div class="header__burger">
+                <span></span>
+              </div>
+            </div>
+
+            <div class="header__menu">
+              <ul class="header__list">
+                <li>
+                  <img
+                    style="width: 28px; height: 28px;"
+                    src="agreement.svg"
+                    alt=""
+                  />
+                </li>
+                <li><img src="search.svg" alt="" /></li>
+                <li>
+                  <select style="color: white !important; background-color:#08242A;">
+                    <option value="0">Est</option>
+                    <option value="1">Rus</option>
+                  </select>
+                </li>
+                <li><img src="shop.svg" alt="" /></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <header id="header-menu" class="animate__animated animate__fadeIn">
         <div class="info">
           <div>
             <a class="mr-2" href="">372 555 555</a>
@@ -70,11 +115,11 @@
         </div>
         <div class="container-fluid">
           <div class="row">
-            <div class="col-md-3 d-none d-md-block ml-5">
+            <div class="col-xl-3 col-md-4 d-none d-md-block ml-5">
               <img id="logo" src="White-Ariol.png" alt="logo" />
             </div>
 
-            <div class="col-md-3 d-none d-md-block basket">
+            <div class="col-xl-3 col-md-4 d-none d-md-block basket">
               <ul>
                 <li>
                   <div class="menu">
@@ -118,9 +163,11 @@
         </div>
       </header>
       <div class="face">
+        
         <!-- Середина -->
-        <div class="container">
-          <p class="main-text">Uued prillid <br />on kohal</p>
+        <div class="container animate__animated animate__fadeIn">
+          <img id="logo_mobile" src="White-Ariol.png" alt="">
+          <p class="main-text ">Uued prillid on kohal</p>
           <div class="parallax" data-speed="-1">
             <img
               class="prlx-img"
@@ -132,7 +179,7 @@
             <div id="container">
               <div class="spritespin1"></div>
             </div>
-            <div class="btn" style="margin-top:40px;">
+            <div class="btn animate__animated" >
               <a style="font-size: 24px; line-height: 28px;" href="">Vaata</a>
             </div>
           </div>
@@ -142,9 +189,11 @@
       <!-- Меню -->
     </section>
     <section>
+
       <div class="cards">
-        <div class="card hvr-bob">
-          <svg
+        <div class="card animate__animated hvr-bob" data-animation-delay="200"  {
+          animation-delay: 0.2s; hvr-bob">
+          <svg 
             class="title"
             width="65"
             height="65"
@@ -179,8 +228,8 @@
 
           <p style="text-align: center;">Laatsevedelikud ja silmatilgad</p>
         </div>
-        <div class="card hvr-bob">
-          <svg
+        <div class="card animate__animated hvr-bob" data-animation-delay="400">
+          <svg 
             class="title"
             width="85"
             height="59"
@@ -197,7 +246,7 @@
             Prilliraamid
           </p>
         </div>
-        <div class="card hvr-bob">
+        <div class="card animate__animated hvr-bob" data-animation-delay="600">
           <svg
             class="title"
             width="85"
@@ -215,7 +264,7 @@
             Prillitoosid
           </p>
         </div>
-        <div class="card hvr-bob">
+        <div class="card animate__animated hvr-bob" data-animation-delay="800">
           <svg
             class="title"
             width="85"
@@ -399,7 +448,7 @@
         <div
           style="border: 1px solid #000000; width: 142px; height: 0px;"
         ></div>
-        <p
+        <p id="meietooted"
           class="mb-0"
           style="
             font-family: Habibi;
@@ -434,6 +483,7 @@
       <div>
         <nav class="navbar-expand-lg hide fixed-top my-7">
           <div>
+            <div id="mobile-side-nav">Toodete Valik</div>
             <ul class="navbar-nav sidenav mt-7">
               <li class="nav-item change">
                 <a class="nav-link" href="#" id="display" data-toggle="collapse"
