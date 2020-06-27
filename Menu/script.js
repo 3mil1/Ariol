@@ -134,6 +134,8 @@ $(".btn")
 
 /* SWIPER */
 
+
+
 let swiper = new Swiper(".swiper-container", {
   slidesPerView: 4,
   spaceBetween: 10,
@@ -144,11 +146,15 @@ let swiper = new Swiper(".swiper-container", {
     el: ".swiper-pagination",
     clickable: true,
   },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
 
   breakpoints: {
     // when window width is >= 320px
     320: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 15,
     },
     // when window width is >= 480px
@@ -161,6 +167,7 @@ let swiper = new Swiper(".swiper-container", {
     },
   },
 });
+
 
 /* End SWIPER */
 
@@ -179,13 +186,14 @@ $(document).ready(function() {
 
 const $sideNav = $('.sidenav');
 
-$(document).mouseup(e => {
+$(document).mouseup(function(e) {
   if (!$sideNav.is(e.target) // if the target of the click isn't the container...
   && $sideNav.has(e.target).length === 0) // ... nor a descendant of the container
   {
     $sideNav.removeClass('active');
  }
 });
+
 
 $(document).ready(function() {
 	$('#mobile-side-nav').click(function(event) {
